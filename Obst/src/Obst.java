@@ -34,8 +34,17 @@ public abstract class Obst {
     public boolean isReif() {
         return reif;
     }
-
     public void setReif(boolean reif) {
         this.reif = reif;
     }
+
+    @Override
+    public String toString(){
+        String text = "Name = " + name;
+        text+= "\n Gewicht =  " + gewicht;
+        text+= "\n Farbe = " + farbe;
+        text+= "\n Reif = " + reif;
+        return text;
+    }
 }
+

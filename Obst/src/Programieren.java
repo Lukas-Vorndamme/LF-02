@@ -22,6 +22,9 @@ public class Programieren {
 
         System.out.println(banane.getName());
 
+        System.out.println(apfel);
+        System.out.println(banane);
+
 
 
 

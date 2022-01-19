@@ -12,7 +12,12 @@ public class Banane extends Obst{
     public void setKruemmung(double kruemmung){
         this.kruemmung = kruemmung;
     }
+public String toString() {
 
+        String text = super.toString();
+        text += "\n Krümmung = " + kruemmung;
+        return text;
+}
 
 
 }
