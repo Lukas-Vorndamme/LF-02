@@ -14,11 +14,10 @@ public class  Trainer   {
 
     @Override
     public String toString() {
-        return "Trainer{" +
-                "alter=" + alter +
-                ", name='" + name + '\'' +
-                ", erfahrung=" + erfahrung +
-                '}';
+        return "Trainer" +
+                "\n  Alter = \t\t" + alter +
+                "\n  Name = \t\t" + name +
+                "\n  Erfahrung =\t" + erfahrung;
     }
 
     public String getName() {

@@ -5,15 +5,15 @@ public class Spieler1 {
 
     private String name;
     private int alter;
-    private int stärker;
+    private int staerker;
     private int torschuss;
     private int motivation;
     private int tore;
 
-    public Spieler1(String name, int alter, int stärker, int torschuss, int motivation, int tore) {
+    public Spieler1(String name, int alter, int staerker, int torschuss, int motivation, int tore) {
         this.name = name;
         this.alter = alter;
-        this.stärker = stärker;
+        this.staerker = staerker;
         this.torschuss = torschuss;
         this.motivation = motivation;
         this.tore = tore;
@@ -21,14 +21,13 @@ public class Spieler1 {
 
     @Override
     public String toString() {
-        return "Spieler1{" +
-                "name='" + name + '\'' +
-                ", alter=" + alter +
-                ", stärker=" + stärker +
-                ", torschuss=" + torschuss +
-                ", motivation=" + motivation +
-                ", tore=" + tore +
-                '}';
+        return
+                "\n  Name = \t\t" + name  +
+                "\n  Alter = \t\t" + alter +
+                "\n  Stärker = \t" + staerker +
+                "\n  Torschuss = \t" + torschuss +
+                "\n  Motivation = \t" + motivation +
+                "\n  Tore = \t\t" + tore ;
     }
 
     public void setName(String name) {
@@ -48,11 +47,11 @@ public class Spieler1 {
     }
 
     public int getStärker() {
-        return stärker;
+        return staerker;
     }
 
     public void setStärker(int stärker) {
-        this.stärker = stärker;
+        this.staerker = stärker;
     }
 
     public int getTorschuss() {
