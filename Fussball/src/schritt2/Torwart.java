@@ -11,9 +11,8 @@ public class Torwart extends Spieler1 {
     }
 
 
-    public String oString() {
-        return "Torwart" +
-                "reaktion = " + reaktion ;
+    public String toString() {
+        return super.toString()+ "\n  Reaktion = \t" + reaktion ;
     }
 
     private int reaktion;
