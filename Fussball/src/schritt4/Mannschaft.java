@@ -13,24 +13,35 @@ public class Mannschaft {
     private ArrayList <Spieler1> spieler1List;
     int motivation = 0;
     int staerke = 0;
-    public Mannschaft(String name, Trainer trainer, Torwart torwart){
+    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler1> spielerList){
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
     }
-    public int getMotivation(){
-        for (Spieler1 s: spieler1List)
-        motivation += s.getMotivation();
-        motivation += torwart.getMotivation();
-        int motivationsschnitt = motivation/(spieler1List.size() + 1);
-        return motivationsschnitt;
+
+    public int getMotivation() {
+        int gesamtMotivation = 0;
+        for (Spieler1 s : spieler1List) {
+            gesamtMotivation = gesamtMotivation + s.getMotivation();
+        }
+
+        gesamtMotivation = gesamtMotivation + torwart.getMotivation();
+
+        gesamtMotivation = gesamtMotivation / spieler1List.size();
+
+        return gesamtMotivation;
     }
-    public int getStaerke(){
-        for (Spieler1 s: spieler1List)
-            staerke += s.getStärker();
-        staerke += torwart.getStärker();
-        int staerkendurchschnitt = staerke/(spieler1List.size() +1);
-        return staerkendurchschnitt;
+
+    public int getStaerke() {
+        int gesamtStaerke = 0;
+        for (Spieler1 s : spieler1List) {
+            gesamtStaerke = gesamtStaerke + s.getStaerke();
+        }
+        gesamtStaerke = gesamtStaerke + torwart.getStaerke();
+
+        gesamtStaerke = gesamtStaerke / spieler1List.size();
+
+        return gesamtStaerke;
     }
 
     public String getName() {

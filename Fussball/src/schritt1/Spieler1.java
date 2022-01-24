@@ -29,7 +29,7 @@ public class Spieler1 extends Person {
     }
 
 
-    public int getStärker() {
+    public int getStaerke() {
         return staerker;
     }
 
