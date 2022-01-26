@@ -17,10 +17,10 @@ public class Spiel {
     @Override
     public String toString() {
         return "Spiel" +
-                "\nheim = \t\t\t" + heim +
-                "\ngast = \t\t\t" + gast +
-                "\nergebnis = \t\t" + ergebnis +
-                "\nspielverlauf = \t" + spielverlauf;
+                "\nHeim = \t\t\t" + heim +
+                "\nGast = \t\t\t" + gast +
+                "\nErgebnis \t\t" + ergebnis +
+                "\nSpielverlauf = \t" + spielverlauf;
     }
 
     public Mannschaft getHeim() {

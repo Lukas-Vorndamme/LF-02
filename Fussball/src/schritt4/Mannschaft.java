@@ -10,13 +10,21 @@ public class Mannschaft {
     private String name;
     private Trainer trainer;
     private Torwart torwart;
-    private ArrayList <Spieler1> spieler1List;
-    int motivation = 0;
-    int staerke = 0;
-    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler1> spielerList){
+    private ArrayList<Spieler1> spieler1List;
+
+    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler1> spielerList) {
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
+    }
+
+    @Override
+    public String toString() {
+        return "Mannschaft" +
+                "\nName = \t\t  " + name +
+                "\nTrainer  \t\t" + trainer +
+                "\nTorwart = \t\t" + torwart;
+
     }
 
     public int getMotivation() {
@@ -54,5 +62,9 @@ public class Mannschaft {
 
     public Trainer getTrainer() {
         return trainer;
+    }
+
+    public ArrayList<Spieler1> getSpieler1List() {
+        return spieler1List;
     }
 }

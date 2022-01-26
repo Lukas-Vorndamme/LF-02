@@ -5,14 +5,14 @@ import schritt3.Person;
 public class Spieler1 extends Person {
 
 
-    private int staerker;
+    private int staerke;
     private int torschuss;
     private int motivation;
     private int tore;
 
     public Spieler1(String name, int alter, int staerker, int torschuss, int motivation, int tore) {
       super(name,alter);
-        this.staerker = staerker;
+        this.staerke = staerker;
         this.torschuss = torschuss;
         this.motivation = motivation;
         this.tore = tore;
@@ -22,7 +22,7 @@ public class Spieler1 extends Person {
     public String toString() {
         return
 
-                "\n  Stärker = \t" + staerker +
+                "\n  Staerke = \t" + staerke +
                 "\n  Torschuss = \t" + torschuss +
                 "\n  Motivation = \t" + motivation +
                 "\n  Tore = \t\t" + tore ;
@@ -30,11 +30,11 @@ public class Spieler1 extends Person {
 
 
     public int getStaerke() {
-        return staerker;
+        return staerke;
     }
 
-    public void setStärker(int stärker) {
-        this.staerker = stärker;
+    public void setStärker(int staerke) {
+        this.staerke = staerke;
     }
 
     public int getTorschuss() {
