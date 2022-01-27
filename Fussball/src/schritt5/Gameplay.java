@@ -77,8 +77,10 @@ public class Gameplay {
                     Spieler1 schuetze = gast_.get(zufall);
                     Torwart torwart = gast.getTorwart();
                     erzielenTor(schuetze, torwart);
+                    System.out.println("Torschuss Gast");
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
+                        System.out.println("Treffer");
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferGast();
                     }
@@ -90,8 +92,10 @@ public class Gameplay {
                     Spieler1 schuetze = heim_.get(zufall);
                     Torwart torwart = heim.getTorwart();
                     erzielenTor(schuetze, torwart);
+                    System.out.println("Torschuss Heim");
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
+                        System.out.println("Treffer");
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferHeim();
 
