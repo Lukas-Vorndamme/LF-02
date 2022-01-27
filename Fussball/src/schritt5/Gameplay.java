@@ -14,9 +14,9 @@ import java.util.Random;
 
 public class Gameplay {
 
-    private static final int Spielzeit = 90;
-    private static final int MaximaleNachspielzeit = 5;
-    private static final int MaximaleDauerBisAktion = 10;
+    private static final int SPIELZEIT = 90;
+    private static final int MAXIMALE_NACHSPIELZEIT = 5;
+    private static final int MAXIMALE_DAUER_BIS_AKTION = 10;
 
 
     public static int ermittelnMannschftswert(Mannschaft mannschaft) {
@@ -54,9 +54,9 @@ public class Gameplay {
 
     public static void spielen(Spiel spiel) {
         Random r = new Random();
-        int nachspielzeit = r.nextInt(MaximaleNachspielzeit);
-        int spielZeit = Spielzeit + nachspielzeit;
-        int naechsteaktionZufall = r.nextInt(MaximaleDauerBisAktion);
+        int nachspielzeit = r.nextInt(MAXIMALE_NACHSPIELZEIT);
+        int spielZeit = SPIELZEIT + nachspielzeit;
+        int naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION);
 
 
         Mannschaft heim = spiel.getHeim();
@@ -103,7 +103,7 @@ public class Gameplay {
 
                     }
                 }
-                naechsteaktionZufall = r.nextInt(MaximaleDauerBisAktion);
+                naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION);
                 j = i;
             }
         }
