@@ -5,13 +5,14 @@ import schritt2.Torwart;
 import schritt4.Ergebnis;
 import schritt4.Mannschaft;
 import schritt4.Spiel;
+import schritt5.Gameplay;
 
 import java.util.ArrayList;
 
 
 public class Programm {
     public static void main(String[] args) {
-
+        Gameplay gameplay = new Gameplay();
         Trainer trainer = new Trainer("Hansie", 35, 4);
         Trainer trainer1 = new Trainer("Hansie", 35, 4);
         Spieler1 spieler1  = new Spieler1("Lukas", 21, 9, 53, 10, 86);
@@ -77,7 +78,10 @@ public class Programm {
         Ergebnis ergebnis = new Ergebnis();
         ergebnis.TrefferGast();
         Spiel spiel = new Spiel(heim,gast,ergebnis);
+        gameplay.spielen(spiel);
         System.out.println(spiel);
+
+
 
 
     }

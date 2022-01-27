@@ -16,6 +16,7 @@ public class Mannschaft {
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
+        this.spieler1List = spielerList;
     }
 
     @Override
@@ -29,15 +30,19 @@ public class Mannschaft {
 
     public int getMotivation() {
         int gesamtMotivation = 0;
+
         for (Spieler1 s : spieler1List) {
-            gesamtMotivation = gesamtMotivation + s.getMotivation();
+            gesamtMotivation += s.getMotivation();
         }
+
+
 
         gesamtMotivation = gesamtMotivation + torwart.getMotivation();
 
-        gesamtMotivation = gesamtMotivation / spieler1List.size();
-
+        gesamtMotivation = gesamtMotivation / spieler1List.size()+1;
+        System.out.println(gesamtMotivation);
         return gesamtMotivation;
+
     }
 
     public int getStaerke() {
