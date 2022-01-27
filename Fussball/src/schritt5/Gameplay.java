@@ -80,9 +80,10 @@ public class Gameplay {
                     System.out.println("Torschuss Gast");
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
-                        System.out.println("Treffer");
+
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferGast();
+                        System.out.println("Treffer");
                     }
 
 
@@ -95,10 +96,10 @@ public class Gameplay {
                     System.out.println("Torschuss Heim");
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
-                        System.out.println("Treffer");
+
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferHeim();
-
+                        System.out.println("Treffer");
 
                     }
                 }
