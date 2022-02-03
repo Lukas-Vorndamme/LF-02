@@ -36,10 +36,10 @@ public class Gameplay {
     }
     public static void spielen(Spiel spiel) {
         Random r = new Random();
-        int nachspielzeit = r.nextInt(MAXIMALE_NACHSPIELZEIT);
+        int nachspielzeit = r.nextInt(MAXIMALE_NACHSPIELZEIT+1);
         int spielZeit = SPIELZEIT + nachspielzeit;
-        int naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION);
-        int aktionminute = MAXIMALE_DAUER_BIS_AKTION;
+        int naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION+1);
+        int aktionminute = naechsteaktionZufall;
         Mannschaft heim = spiel.getHeim();
         int mannschaftsWertHeim = ermittelnMannschftswert(heim);
         Mannschaft gast = spiel.getGast();
@@ -55,7 +55,7 @@ public class Gameplay {
                     Spieler schuetze = gast_.get(zufall);
                     Torwart torwart = gast.getTorwart();
                     erzielenTor(schuetze, torwart);
-                    System.out.println("Torschuss Gast Bei Minute \t " + aktionminute);
+                    System.out.println("Torschuss Gast Bei Minute \t " + aktionminute  + "\nSchützen Nummer \t" + zufall);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
                         Ergebnis ergebnis = spiel.getErgebnis();
@@ -72,7 +72,7 @@ public class Gameplay {
                     Torwart torwart = heim.getTorwart();
                     erzielenTor(schuetze, torwart);
                     System.out.println();
-                    System.out.println("Torschuss Heim Bei Minute  \t" + aktionminute);
+                    System.out.println("Torschuss Heim Bei Minute  \t" + aktionminute + "\nSchützen Nummer \t" + zufall);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
                         Ergebnis ergebnis = spiel.getErgebnis();
