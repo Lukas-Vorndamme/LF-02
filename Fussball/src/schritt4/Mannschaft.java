@@ -69,7 +69,7 @@ public class Mannschaft {
         return trainer;
     }
 
-    public ArrayList<Spieler> getSpieler1List() {
+    public ArrayList<Spieler> getSpielerList() {
         return spieler1List;
     }
 }

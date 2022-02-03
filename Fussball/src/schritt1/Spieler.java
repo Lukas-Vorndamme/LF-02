@@ -53,7 +53,7 @@ public class Spieler extends Person {
         this.motivation = motivation;
     }
 
-    public int getTore() {
+    public int addTor() {
         return tore;
     }
 

@@ -35,7 +35,7 @@ public class Spiel {
         return ergebnis;
     }
 
-    public StringBuilder getSpielverlauf() {
+    public StringBuilder getSpielbericht() {
         return spielverlauf;
     }
 }

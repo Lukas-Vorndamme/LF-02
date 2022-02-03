@@ -2,27 +2,27 @@ package schritt4;
 
 public class Ergebnis {
 
-    private int trefferHeim;
-    private int trefferGast;
+    private int addToreHeim;
+    private int addToreGast;
 
     @Override
     public String toString() {
         return
-                "\nTrefferHeim = " + trefferHeim +
-                "\nTrefferGast = " + trefferGast ;
+                "\nTrefferHeim = " + addToreHeim +
+                "\nTrefferGast = " + addToreGast;
     }
 
-    public int getTrefferGast() {
-        return trefferGast;
+    public int addToregast() {
+        return addToreGast;
     }
     public void TrefferGast(){
-        trefferGast++;
+        addToreGast++;
     }
 
-    public int getTrefferHeim() {
-        return trefferHeim;
+    public int AddToreHeim() {
+        return addToreHeim;
     }
     public void TrefferHeim(){
-        trefferHeim++;
+        addToreHeim++;
     }
 }
