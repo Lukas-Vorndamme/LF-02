@@ -2,7 +2,7 @@ package schritt1;
 
 import schritt3.Person;
 
-public class Spieler1 extends Person {
+public class Spieler extends Person {
 
 
     private int staerke;
@@ -10,7 +10,7 @@ public class Spieler1 extends Person {
     private int motivation;
     private int tore;
 
-    public Spieler1(String name, int alter, int staerker, int torschuss, int motivation, int tore) {
+    public Spieler(String name, int alter, int staerker, int torschuss, int motivation, int tore) {
       super(name,alter);
         this.staerke = staerker;
         this.torschuss = torschuss;

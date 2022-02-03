@@ -1,6 +1,6 @@
 package schritt4;
 
-import schritt1.Spieler1;
+import schritt1.Spieler;
 import schritt1.Trainer;
 import schritt2.Torwart;
 
@@ -10,9 +10,9 @@ public class Mannschaft {
     private String name;
     private Trainer trainer;
     private Torwart torwart;
-    private ArrayList<Spieler1> spieler1List;
+    private ArrayList<Spieler> spieler1List;
 
-    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler1> spielerList) {
+    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler> spielerList) {
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
@@ -31,7 +31,7 @@ public class Mannschaft {
     public int getMotivation() {
         int gesamtMotivation = 0;
 
-        for (Spieler1 s : spieler1List) {
+        for (Spieler s : spieler1List) {
             gesamtMotivation += s.getMotivation();
         }
 
@@ -47,7 +47,7 @@ public class Mannschaft {
 
     public int getStaerke() {
         int gesamtStaerke = 0;
-        for (Spieler1 s : spieler1List) {
+        for (Spieler s : spieler1List) {
             gesamtStaerke = gesamtStaerke + s.getStaerke();
         }
         gesamtStaerke = gesamtStaerke + torwart.getStaerke();
@@ -69,7 +69,7 @@ public class Mannschaft {
         return trainer;
     }
 
-    public ArrayList<Spieler1> getSpieler1List() {
+    public ArrayList<Spieler> getSpieler1List() {
         return spieler1List;
     }
 }

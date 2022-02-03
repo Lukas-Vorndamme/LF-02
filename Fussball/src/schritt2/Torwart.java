@@ -1,8 +1,8 @@
 package schritt2;
 
-import schritt1.Spieler1;
+import schritt1.Spieler;
 
-public class Torwart extends Spieler1 {
+public class Torwart extends Spieler {
 
 
     public Torwart(String name, int alter, int staerke, int motivation, int reaktion){

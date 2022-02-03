@@ -1,7 +1,7 @@
 package schritt5;
 
 
-import schritt1.Spieler1;
+import schritt1.Spieler;
 import schritt1.Trainer;
 import schritt2.Torwart;
 import schritt4.Ergebnis;
@@ -28,12 +28,11 @@ public class Gameplay {
         return mannschaftswert;
     }
 
-    private static boolean erzielenTor(Spieler1 schuetze, Torwart torwart) {
+    private static boolean erzielenTor(Spieler schuetze, Torwart torwart) {
 
         boolean tor;
         Random r = new Random();
         int wert = r.nextInt(5) - 2;
-        int wert1 = r.nextInt(5) - 2;
 
 
         int torschuss = schuetze.getTorschuss() + wert;
@@ -57,7 +56,7 @@ public class Gameplay {
         int nachspielzeit = r.nextInt(MAXIMALE_NACHSPIELZEIT);
         int spielZeit = SPIELZEIT + nachspielzeit;
         int naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION);
-
+        int aktionminute = MAXIMALE_DAUER_BIS_AKTION;
 
         Mannschaft heim = spiel.getHeim();
         int mannschaftsWertHeim = ermittelnMannschftswert(heim);
@@ -72,38 +71,48 @@ public class Gameplay {
 
                 int zufall = r.nextInt(summme);
                 if (zufall > mannschaftsWertHeim) {
-                    ArrayList<Spieler1> gast_ = gast.getSpieler1List();
+                    ArrayList<Spieler> gast_ = gast.getSpieler1List();
                     zufall = r.nextInt(gast_.size());
-                    Spieler1 schuetze = gast_.get(zufall);
+                    Spieler schuetze = gast_.get(zufall);
                     Torwart torwart = gast.getTorwart();
                     erzielenTor(schuetze, torwart);
-                    System.out.println("Torschuss Gast");
+                    System.out.println("Torschuss Gast Bei Minute \t " + aktionminute);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
-
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferGast();
+                        schuetze.setTore(+1);
                         System.out.println("Treffer");
+                    }else {
+                        System.out.println("Gehalten");
                     }
 
 
                 } else {
-                    ArrayList<Spieler1> heim_ = heim.getSpieler1List();
+                    ArrayList<Spieler> heim_ = heim.getSpieler1List();
                     zufall = r.nextInt(heim_.size());
-                    Spieler1 schuetze = heim_.get(zufall);
+                    Spieler schuetze = heim_.get(zufall);
                     Torwart torwart = heim.getTorwart();
                     erzielenTor(schuetze, torwart);
-                    System.out.println("Torschuss Heim");
+                    System.out.println();
+                    System.out.println("Torschuss Heim Bei Minute  \t" + aktionminute);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
 
                         Ergebnis ergebnis = spiel.getErgebnis();
                         ergebnis.TrefferHeim();
+                        schuetze.setTore(+1);
                         System.out.println("Treffer");
 
                     }
+                    else {
+                        System.out.println("Gehalten");
+                    }
                 }
+
+
                 naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION);
+                aktionminute = aktionminute + naechsteaktionZufall;
                 j = i;
             }
         }
