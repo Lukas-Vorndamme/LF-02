@@ -55,7 +55,7 @@ public class Gameplay {
                     Spieler schuetze = gast_.get(zufall);
                     Torwart torwart = gast.getTorwart();
                     erzielenTor(schuetze, torwart);
-                    System.out.println("Torschuss Gast Bei Minute \t " + aktionminute  + "\nSchützen Nummer \t" + zufall);
+                    System.out.println("Torschuss Gast Bei Minute \t " + aktionminute  + "\nSchützen Trikot Nummer \t" + zufall);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
                         Ergebnis ergebnis = spiel.getErgebnis();
@@ -72,7 +72,7 @@ public class Gameplay {
                     Torwart torwart = heim.getTorwart();
                     erzielenTor(schuetze, torwart);
                     System.out.println();
-                    System.out.println("Torschuss Heim Bei Minute  \t" + aktionminute + "\nSchützen Nummer \t" + zufall);
+                    System.out.println("Torschuss Heim Bei Minute  \t" + aktionminute + "\nSchützen Trikot Nummer \t" + zufall);
                     boolean tor = erzielenTor(schuetze, torwart);
                     if (tor) {
                         Ergebnis ergebnis = spiel.getErgebnis();
