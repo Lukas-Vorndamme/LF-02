@@ -4,6 +4,8 @@ import schritt2.Torwart;
 import schritt4.Ergebnis;
 import schritt4.Mannschaft;
 import schritt4.Spiel;
+import schritt6.SpielAbbruchException;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -34,7 +36,22 @@ public class Gameplay {
         }
         return tor;
     }
-    public static void spielen(Spiel spiel) {
+    public static boolean brecheSpielAb(){
+        boolean k = false;
+        Random r = new Random();
+        int spielabbruch;
+        spielabbruch = r.nextInt(1000);
+
+        if (spielabbruch == 0){
+            k = true;
+        }else{
+            k = false;
+        }
+        return k;
+    }
+
+    public static void spielen(Spiel spiel)throws SpielAbbruchException {
+
         Random r = new Random();
         Mannschaft offensiv;
         Mannschaft defensiv;
@@ -48,6 +65,10 @@ public class Gameplay {
         int mannschaftsWertGast = ermittelnMannschftswert(gast);
         int summe = mannschaftsWertHeim + mannschaftsWertGast;
         int zufall = r.nextInt(summe + 1);
+
+        if (brecheSpielAb()) {
+            throw new SpielAbbruchException(aktionminute); }
+
         if (zufall <= mannschaftsWertHeim) {
             offensiv = spiel.getHeim();
             defensiv = spiel.getGast();
@@ -98,7 +119,9 @@ public class Gameplay {
                 naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION + 1);
                 aktionminute = aktionminute + naechsteaktionZufall;
                 j = i;
+
             }
+
         }
     }
 }

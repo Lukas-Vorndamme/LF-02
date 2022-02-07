@@ -6,12 +6,13 @@ import schritt4.Ergebnis;
 import schritt4.Mannschaft;
 import schritt4.Spiel;
 import schritt5.Gameplay;
+import schritt6.SpielAbbruchException;
 
 import java.util.ArrayList;
 
 
 public class Programm {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SpielAbbruchException {
         Gameplay gameplay = new Gameplay();
         Trainer trainer = new Trainer("Hansie", 35, 4);
         Trainer trainer1 = new Trainer("Hansie", 35, 4);
@@ -79,6 +80,9 @@ public class Programm {
         ergebnis.TrefferGast();
         Spiel spiel = new Spiel(heim,gast,ergebnis);
         gameplay.spielen(spiel);
+        try { Gameplay.spielen(spiel); }
+        catch (SpielAbbruchException e)
+        { System.out.println(e.getMessage()); }
         System.out.println(spiel);
 
 
