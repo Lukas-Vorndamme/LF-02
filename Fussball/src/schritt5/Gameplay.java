@@ -65,7 +65,7 @@ public class Gameplay {
         int mannschaftsWertGast = ermittelnMannschftswert(gast);
         int summe = mannschaftsWertHeim + mannschaftsWertGast;
         int zufall = r.nextInt(summe + 1);
-
+do {
         if (brecheSpielAb()) {
             throw new SpielAbbruchException(aktionminute); }
 
@@ -115,13 +115,13 @@ public class Gameplay {
                     } else {
                         System.out.println("Gehalten");
                     }
-                }
+                }}
                 naechsteaktionZufall = r.nextInt(MAXIMALE_DAUER_BIS_AKTION + 1);
                 aktionminute = aktionminute + naechsteaktionZufall;
                 j = i;
 
             }
 
-        }
+        }while ((SPIELZEIT+nachspielzeit) > aktionminute);
     }
 }
