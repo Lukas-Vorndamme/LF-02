@@ -15,7 +15,9 @@ public class Zauberer extends Spielfigur{
 
     public void zaubern(String name)throws KeineKraftExeption{
         zauberpunkte = zauberpunkte -1;
-        if (fehler(zauberpunkte)){
+        if (zauberpunkte > 1) {
+            System.out.println("zaubert");
+        }else {
             throw new KeineKraftExeption("Zaubern",name);
         }
     }

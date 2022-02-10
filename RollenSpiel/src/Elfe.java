@@ -6,7 +6,9 @@ public class Elfe extends Spielfigur{
     }
 public void rennen()throws KeineKraftExeption{
        setStaerkepunkte(getStaerkepunkte()-2);
-    if (fehler(getStaerkepunkte())){
+    if (getStaerkepunkte() > 2) {
+        System.out.println("Rennt");
+    }else {
         throw new KeineKraftExeption("Rennen",getName());
     }
 }

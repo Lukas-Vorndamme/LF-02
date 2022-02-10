@@ -38,21 +38,27 @@ public abstract class Spielfigur {
 
     public void kaempfen() throws KeineKraftExeption {
         staerkepunkte = staerkepunkte - 3;
-        if (fehler(staerkepunkte)) {
+        if (staerkepunkte > 3) {
+            System.out.println("Kämpft");
+        }else {
             throw new KeineKraftExeption("Kämpfen", name);
         }
     }
 
     public void klettern() throws KeineKraftExeption {
         staerkepunkte = staerkepunkte - 2;
-        if (fehler(staerkepunkte)) {
+        if (staerkepunkte > 2) {
+            System.out.println("Klettert");
+        }else {
             throw new KeineKraftExeption("Klettern", name);
         }
     }
 
     public void laufen() throws KeineKraftExeption {
         staerkepunkte = staerkepunkte - 1;
-        if (fehler(staerkepunkte)) {
+        if (staerkepunkte > 1) {
+            System.out.println("Läuft");
+        }else {
             throw new KeineKraftExeption("Laufen", name);
         }
     }
