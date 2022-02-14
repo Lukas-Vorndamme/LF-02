@@ -2,8 +2,8 @@ public class Adresse {
 
     private String straße;
     private String ort;
-    private int hausnummer;
-    private int posteizahl;
+    private String hausnummer;
+    private String posteizahl;
 
     @Override
     public String toString() {
@@ -13,26 +13,26 @@ public class Adresse {
                 " \nhausnummer = " + hausnummer +
                 " \nposteizahl = " + posteizahl;
     }
-public Adresse(String straße, String ort, int hausnummer, int posteizahl){
+public Adresse(String straße, String ort, String hausnummer, String posteizahl){
         this.straße = straße;
         this.ort = ort;
         this.hausnummer = hausnummer;
         this.posteizahl = posteizahl;
 
 }
-    public int getHausnummer() {
+    public String getHausnummer() {
         return hausnummer;
     }
 
-    public void setHausnummer(int hausnummer) {
+    public void setHausnummer(String hausnummer) {
         this.hausnummer = hausnummer;
     }
 
-    public int getPosteizahl() {
+    public String getPosteizahl() {
         return posteizahl;
     }
 
-    public void setPosteizahl(int posteizahl) {
+    public void setPosteizahl(String posteizahl) {
         this.posteizahl = posteizahl;
     }
 
