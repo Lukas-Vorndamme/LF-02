@@ -35,10 +35,11 @@ public abstract class Konto {
     public void setZinsGuthaben(double zinsGuthaben) {
         this.zinsGuthaben = zinsGuthaben;
     }
-    public void einzahlen(double betrag){
+    public boolean einzahlen(double betrag){
         kontoStand += betrag;
+        return true;
     }
-    public void auszahlen(double betrag) throws KeineGeldExeption {
+    public boolean auszahlen(double betrag){
         boolean k;
         if (betrag < kontoStand){
             k =  true;
@@ -47,9 +48,10 @@ public abstract class Konto {
         if (k){
             kontoStand -= betrag;
         }else {
-            throw new KeineGeldExeption();
+            System.out.println("");
         }
 
+        return k;
     }
 
 
