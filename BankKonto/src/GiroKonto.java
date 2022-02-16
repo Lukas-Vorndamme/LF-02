@@ -13,12 +13,12 @@ public class GiroKonto extends Konto{
     public void setZinsKredit(double zinsKredit) {
         this.zinsKredit = zinsKredit;
     }
-    public void ueberweisung(double betrag, GiroKonto giroKonto){
+    public void ueberweisung(double betrag, GiroKonto giroKonto) throws KeineGeldExeption {
         if (betrag < (getKontoStand()+getKreditLimit())){
             double KontoStand = giroKonto.getKontoStand() - betrag;
 
         }else {
-            System.out.println("Du hast nicht genug geld für diese überweisung");
+            throw new KeineGeldExeption();
         }
     }
 }

@@ -38,7 +38,7 @@ public abstract class Konto {
     public void einzahlen(double betrag){
         kontoStand += betrag;
     }
-    public void auszahlen(double betrag){
+    public void auszahlen(double betrag) throws KeineGeldExeption {
         boolean k;
         if (betrag < kontoStand){
             k =  true;
@@ -47,8 +47,7 @@ public abstract class Konto {
         if (k){
             kontoStand -= betrag;
         }else {
-            System.out.println("Du kannst diesen betrag nicht abheben da du nicht genug geld auf dem konto hast");
-            System.out.println("Maximaler betrag zum abheben "+kontoStand+"€");
+            throw new KeineGeldExeption();
         }
 
     }
