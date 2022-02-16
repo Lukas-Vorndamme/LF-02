@@ -13,6 +13,9 @@ public class Programm {
         Sparkonto sparkonto = new Sparkonto(kunde,1500,1.6);
         System.out.println(sparkonto.getKontoStand());
         System.out.println(sparkonto.zinsen(1500,1.5));
+        mitarbeiter.setAdresse("Haupstr 44 28023 Bremen");
+        System.out.println("\n Mitarbeiter" + mitarbeiter);
+
 
 
 

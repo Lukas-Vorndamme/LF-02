@@ -4,6 +4,14 @@ public abstract class Person {
     private String nachnamename;
     private String adresse;
 
+    @Override
+    public String toString() {
+        return
+                "\nVorname = " + vorname +
+                "\nNachnamename = " + nachnamename +
+                "\nAdresse = " + adresse;
+    }
+
     public Person(String vorname, String nachname){
         this.vorname = vorname;
         this.nachnamename = nachname;
