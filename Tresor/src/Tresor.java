@@ -33,7 +33,6 @@ public class Tresor {
             summe += gegenstaende.get(i).getWert();
         return summe;
     }
-
     @Override
     public String toString() {
         return super.toString() + "Tresor" +
