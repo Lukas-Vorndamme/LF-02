@@ -5,15 +5,16 @@ public abstract class Gegenstand {
     private double wert;
 
 
-    public Gegenstand(int id,double wert){
+    public Gegenstand(int id, double wert) {
         this.wert = wert;
         this.id = id;
     }
+
     @Override
     public String toString() {
         return "Gegenstand " +
-                "id = " +
-                "wert = " + wert;
+                "\nID = " + getId() +
+                "\nWert = " + wert+"\n";
     }
 
     public double getWert() {

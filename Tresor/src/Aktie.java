@@ -3,11 +3,13 @@ public class Aktie extends Gegenstand {
     private String unternehmen;
     private double nennwert;
 
-    public Aktie(int id, double wert,String unternehmen,double nennwert){
+    public Aktie(int id, double wert, String unternehmen, double nennwert) {
         super(id, wert);
         this.unternehmen = unternehmen;
         this.nennwert = nennwert;
     }
+
+
     public double getNennwert() {
         return nennwert;
     }
@@ -26,8 +28,8 @@ public class Aktie extends Gegenstand {
 
     @Override
     public String toString() {
-        return "Aktie" +
-                "unternehmen = " + unternehmen +
-                "nennwert = " + nennwert;
+        return super.toString() + "Aktie" +
+                "Unternehmen = " + unternehmen +
+                "Nennwert = " + nennwert;
     }
 }
