@@ -15,6 +15,7 @@ public class Program {
         }
         tresor.getGegenstand(15261,"Halskette");
         tresor.getGegenstand(52649,"Uhr");
+        tresor.getGegenstand(18325,"Aktie");
 
 
     }
