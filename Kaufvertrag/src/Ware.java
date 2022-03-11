@@ -31,4 +31,31 @@ public class Ware {
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
     }
+
+    public double getPreis() {
+        return preis;
+    }
+
+    public void setPreis(double preis) {
+        this.preis = preis;
+    }
+
+    public ArrayList<String> getMeangel() {
+        return meangel;
+    }
+
+    public ArrayList<String> getBesonderheiten() {
+        return besonderheiten;
+    }
+
+    @Override
+    public String toString() {
+        return "Ware{" +
+                "bezeichnung='" + bezeichnung + '\'' +
+                ", beschreibung='" + beschreibung + '\'' +
+                ", preis=" + preis +
+                ", besonderheiten=" + besonderheiten +
+                ", meangel=" + meangel +
+                '}';
+    }
 }
