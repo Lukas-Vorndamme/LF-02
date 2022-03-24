@@ -9,7 +9,6 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.Style;
 import com.itextpdf.layout.element.*;
 import com.itextpdf.layout.property.TextAlignment;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -41,14 +40,14 @@ public class ProgrammWritePDF {
 
             Cell Ueberschrift = new Cell();
             Ueberschrift.setTextAlignment(TextAlignment.CENTER);
-            Ueberschrift.add(new Paragraph("Kaufvertrag").setBackgroundColor(ColorConstants.LIGHT_GRAY).setFontColor(new DeviceRgb(0,100,150)).setFontSize(30));
+            Ueberschrift.add(new Paragraph("Kaufvertrag").setBackgroundColor(new DeviceRgb(160,160,160)).setFontColor(new DeviceRgb(0,0,10)).setFontSize(30));
 
             document.add(Ueberschrift);
 
             Paragraph pKaeufer = new Paragraph();
 
 
-            pKaeufer.add(new Text("Käufer:\n").setUnderline().setFontColor(ColorConstants.GREEN).setFontSize(16));
+            pKaeufer.add(new Text("Käufer:\n").setUnderline().setFontColor(ColorConstants.BLACK).setFontSize(16));
             document.add(pKaeufer);
 
 
@@ -63,7 +62,7 @@ public class ProgrammWritePDF {
 
             Paragraph pVerkaeufer = new Paragraph();
 
-            pVerkaeufer.add(new Text("Verkäufer:\n").setFontColor(ColorConstants.RED).setUnderline().setFontSize(16));
+            pVerkaeufer.add(new Text("Verkäufer:\n").setFontColor(ColorConstants.DARK_GRAY).setUnderline().setFontSize(16));
             document.add(pVerkaeufer);
 
             List listVerkaeufer = new List();
@@ -109,7 +108,7 @@ public class ProgrammWritePDF {
             document.add(tableWare);
 
             Paragraph pZahlung = new Paragraph();
-            pZahlung.add(new Text("\nZahlungsmodalitäten:\n").setFontSize(16).setUnderline().setFontColor(ColorConstants.LIGHT_GRAY));
+            pZahlung.add(new Text("\nZahlungsmodalitäten:\n").setFontSize(16).setUnderline().setFontColor(ColorConstants.DARK_GRAY));
             pZahlung.add(vertrag.getZahlungsModalitaeten());
             document.add(pZahlung);
             document.close();

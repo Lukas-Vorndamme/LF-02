@@ -21,11 +21,7 @@ public class KaufvertragTXT {
 
     }
     public static Kaufvertrag erstellenKaufvertrag(){
-        ArrayList<String> Besonderheiten = new ArrayList<>();
-        ArrayList<String> Maengel = new ArrayList<>();
-            Ware ware = new Ware("Laptop", "Laptop", 250.0);
-            ware.setBeschreibung("Super krasses Gaming-Laptop");
-            ware.getBesonderheiten().add("Tasche");
+            Ware ware = new Ware("Laptop", " Super krasser Gaming-Laptop", 250.0);ware.getBesonderheiten().add("Tasche");
             ware.getBesonderheiten().add("Gaming-Maus");
             ware.getMaengel().add("Ladekabel fehlt");
             ware.getMaengel().add("Touchpad defekt");
