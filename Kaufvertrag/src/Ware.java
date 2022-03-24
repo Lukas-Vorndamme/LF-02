@@ -8,12 +8,11 @@ public class Ware {
     private ArrayList<String> besonderheiten   = new ArrayList<>();
     private ArrayList<String> meangel = new ArrayList<>();
 
-    Ware(String bezeichnung, String beschreibung, double preis, ArrayList<String> besonderheiten, ArrayList<String> meangel){
+    Ware(String bezeichnung, String beschreibung, double preis){
        this.bezeichnung = bezeichnung;
        this.beschreibung = beschreibung;
        this.preis = preis;
-       this.besonderheiten = besonderheiten;
-       this.meangel = meangel;
+
     }
 
     public String getBezeichnung() {
@@ -40,7 +39,7 @@ public class Ware {
         this.preis = preis;
     }
 
-    public ArrayList<String> getMeangel() {
+    public ArrayList<String> getMaengel() {
         return meangel;
     }
 

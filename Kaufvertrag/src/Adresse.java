@@ -13,11 +13,11 @@ public class Adresse {
         this.ort = ort;
     }
 
-    public String getStarsse() {
+    public String getStrasse() {
         return starsse;
     }
 
-    public void setStarsse(String starsse) {
+    public void setStasse(String starsse) {
         this.starsse = starsse;
     }
 

@@ -1,13 +1,12 @@
-public class Verkaufspartner {
+public class Vertragspartner {
     private String vorname;
     private String nachname;
     private String ausweisNr;
     private Adresse adresse;
-    public Verkaufspartner(String vorname, String nachname, String ausweisNr, Adresse adresse){
+    public Vertragspartner(String vorname, String nachname){
         this.vorname = vorname;
         this.nachname = nachname;
-        this.ausweisNr = ausweisNr;
-        this.adresse = adresse;
+
     }
 
     public String getVorname() {
